@@ -11,7 +11,8 @@ pipeline {
             steps {
                 git branch: 'master', url: 'https://github.com/SrinuVadlapudi/gcp-devops.git'
             }
-        }
+        }		
+	   
       
 
 		stage('Set Terraform path') {
