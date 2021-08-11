@@ -1,5 +1,6 @@
 provider "google" {
-  project = "nasa7733-lab"
+  project = "srinu2"
+  credentials = file("srinu2-14f292a3a4e3.json")
   region  = "europe-west2"
   zone    = "europe-west2-a"
 }
