@@ -1,15 +1,15 @@
 provider "google" {
   project = "srinu2"
   credentials = file("srinu2-14f292a3a4e3.json")
-  region  = "asia-east2-b"
-  zone    = "asia-east2-b"
+  region  = "europe-west2"
+  zone    = "europe-west2-a"
 }
 resource "google_compute_network" "vpc_network" {
-  name = "terraform-network-8"
+  name = "terraform-network"
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "terraform-instance-ink"
+  name         = "terraform-instance"
   machine_type = "f1-micro"
 
   boot_disk {
