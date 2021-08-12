@@ -28,28 +28,12 @@ pipeline {
             }
         }
         
-         stage('Initialize Terraform') {
+       
+	    	stage('Terraform DESTROY') {
 		 steps {  
 			  dir('VM-VPC')
 			 {
-                sh 'terraform init'
-			 }
-		 }
-	 }
-				 
-	stage('Terraform Plan') {
-		 steps {  
-			  dir('VM-VPC')
-			 {
-                sh 'terraform plan'
-			 }
-		 }
-	}
-	    	stage('Terraform Apply') {
-		 steps {  
-			  dir('VM-VPC')
-			 {
-                sh 'terraform apply -auto-approve'
+                sh 'terraform destroy -auto-approve'
 			 }
 		 }
 	}
