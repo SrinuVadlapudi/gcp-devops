@@ -5,7 +5,7 @@ provider "google" {
   zone    = "europe-west2-a"
 }
 resource "google_compute_network" "vpc_network" {
-  name = "terraform-network"
+  name = "terraform-network 3"
 }
 
 resource "google_compute_instance" "vm_instance" {
