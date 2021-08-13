@@ -43,6 +43,7 @@ pipeline {
                 sh 'terraform $TF_ACTION $TF_PERMISSION'
 			 }
 		 }
+			
 	}
                              
 }
