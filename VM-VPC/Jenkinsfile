@@ -55,14 +55,6 @@ pipeline {
 		 }
 	}
  
-	                		 
-	stage('Terraform Destroy') {
-		 steps {  
-			  dir('VM-VPC')
-			 {
-		sh 'terraform destroy -auto-approve'
-}
-}
-}
+
     }
 }
