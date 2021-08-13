@@ -50,11 +50,18 @@ pipeline {
 			  dir('VM-VPC')
 			 {
                 sh 'terraform apply -auto-approve'
-		sh 'terraform destroy -auto-approve'
+	
 			 }
 		 }
 	}
              		 
-
+stage('Terraform Apply') {
+		 steps {  
+			  dir('VM-VPC')
+			 {
+		sh 'terraform destroy -auto-approve'
 }
+}
+}
+    }
 }
