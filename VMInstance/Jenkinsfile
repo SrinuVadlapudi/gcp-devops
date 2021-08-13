@@ -52,14 +52,6 @@ pipeline {
                 sh 'terraform apply -auto-approve'
 			 }
 		 }
-	}
-    stage('Terraform Destroy') {
-		 steps {  
-			  dir('VMInstance')
-			 {
-                sh 'terraform destroy -auto-approve'
-			 }
-		 }
-	}                         
+	}           
 }
 }
