@@ -25,3 +25,4 @@ resource "google_container_cluster" "create" {
     machine_type = "${var.machine_type}"
   }
 }
+
