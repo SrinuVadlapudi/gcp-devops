@@ -57,7 +57,7 @@ pipeline {
 		 steps {  
 			  dir('VMInstance')
 			 {
-                sh 'terraform adestroy -auto-approve'
+                sh 'terraform destroy -auto-approve'
 			 }
 		 }
 	}                         
