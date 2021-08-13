@@ -49,7 +49,7 @@ pipeline {
 		 steps {  
 			  dir('VM-VPC')
 			 {
-                sh 'terraform $TF-ACTION -auto-approve'
+                sh 'terraform $TF_ACTION -auto-approve'
 			 }
 		 }
 	}
