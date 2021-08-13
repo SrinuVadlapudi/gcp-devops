@@ -3,7 +3,7 @@ pipeline {
 
 
     environment {
-    SVC_ACCOUNT_KEY = credentials('srinu')
+    SVC_ACCOUNT_KEY = credentials('terraform-auth')
   }
      
     stages {
