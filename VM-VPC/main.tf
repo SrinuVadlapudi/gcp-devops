@@ -5,11 +5,11 @@ provider "google" {
   zone    = "europe-west2-a"
 }
 resource "google_compute_network" "vpc_network" {
-  name = "terraform-network-3"
+  name = "terraform-network"
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "terraform-instance-3"
+  name         = "terraform-instance"
   machine_type = "f1-micro"
 
   boot_disk {
