@@ -27,7 +27,7 @@ pipeline {
                
             }
         }
-          stage('Initialize Terraform') {
+                   stage('Initialize Terraform') {
 		 steps {  
 			  dir('VM-VPC')
 			 {
@@ -35,16 +35,25 @@ pipeline {
 			 }
 		 }
 	 }
-	
-	    	stage('Terraform ACTION') {
+				 
+	stage('Terraform Plan') {
 		 steps {  
 			  dir('VM-VPC')
 			 {
-                sh 'terraform $TF_ACTION $TF_PERMISSION'
+                sh 'terraform plan'
 			 }
 		 }
-			
+	}
+				 
+	stage('Terraform Apply') {
+		 steps {  
+			  dir('VM-VPC')
+			 {
+                sh 'terraform apply -auto-approve'
+			 }
+		 }
 	}
                              
 }
 }
+
