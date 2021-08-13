@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage ('checkout'){
             steps {
-                git branch: 'main', url: 'https://github.com/ishaqmdgcp/gcp-devops.git'
+                git branch: 'master', url: 'https://github.com/SrinuVadlapudi/gcp-devops.git'
             }
         }
       
@@ -20,7 +20,7 @@ pipeline {
                     def tfHome = tool name: 'Terraform'
                     env.PATH = "${tfHome}:${env.PATH}"
                 }
-                sh 'echo $SVC_ACCOUNT_KEY | base64 -d > ./VMInstance/terraform.json'
+                sh 'echo $SVC_ACCOUNT_KEY | base64 -d > ./VMInstance/srinu2-14f292a3a4e3.json'
 		sh 'pwd'
                 sh 'terraform --version'               
                
