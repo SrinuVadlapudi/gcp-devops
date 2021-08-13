@@ -35,21 +35,12 @@ pipeline {
 			 }
 		 }
 	 }
-				 
-	stage('Terraform Plan') {
-		 steps {  
-			  dir('VM-VPC')
-			 {
-                sh 'terraform plan'
-			 }
-		 }
-	}
-       
+	
 	    	stage('Terraform APPLY') {
 		 steps {  
 			  dir('VM-VPC')
 			 {
-                sh 'terraform $TF_ACTION -auto-approve'
+                sh 'terraform $TF_ACTION $TF_PERMISSION'
 			 }
 		 }
 	}
