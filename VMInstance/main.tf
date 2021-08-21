@@ -8,7 +8,7 @@ provider "google" {
 }
 
 resource "google_compute_instance" "vm-instance" {
-  name         = "test-99"
+  name         = "test"
   machine_type = "f1-micro"
   zone         = "us-east1-b"
 
