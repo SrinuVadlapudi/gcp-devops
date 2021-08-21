@@ -3,14 +3,14 @@ provider "google" {
  
   project = "srinu2"
   credentials = file("srinu2-14f292a3a4e3.json")
-  region  = "us-east1"
+  region  = "us-west1"
   
 }
 
 resource "google_compute_instance" "vm-instance" {
   name         = "test"
   machine_type = "f1-micro"
-  zone         = "us-east1-b"
+  zone         = "us-west1"
 
 
   boot_disk {
