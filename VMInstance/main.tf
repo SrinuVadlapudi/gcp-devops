@@ -1,8 +1,8 @@
 # This is the provider used to spin up the gcloud instance
 provider "google" {
  
-  project = "srinu2"
-  credentials = file("srinu2-14f292a3a4e3.json")
+  project = "sri999"
+  credentials = file("sri999-db1a5bd6b977.json")
   region  = "us-east1"
   
 }
