@@ -1,5 +1,5 @@
 provider "google" {
-  project = "nasa7733-lab"
+  project = "sri999"
   region  = "europe-west2"
   zone    = "europe-west2-a"
 }
